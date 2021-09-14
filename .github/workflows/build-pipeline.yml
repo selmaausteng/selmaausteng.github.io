@@ -1,12 +1,19 @@
-name: AccentureWorkshop
+name: This is a workflow
 
 on:
   push:
-    branches: [ develop ]
+    branches: 
+      - master
   pull_request:
-    branches: [ develop ]
+    branches:
+      - master
 
 jobs:
+  print-comment:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: |
+          echo  "This comment"
   build:
     runs-on: ubuntu-latest
     steps:
@@ -29,4 +36,12 @@ jobs:
           node-version: '14.x'
       - name: Install dependencies
         run: npm ci
+      - name: Buid
+        run: nmp run build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: dist
+        
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme

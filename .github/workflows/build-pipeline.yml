@@ -35,7 +35,7 @@ jobs:
         run: npm ci
       # Step 2: Add deploy to Github pages here! Hot tip - The solution is in the Readme
       - name: Build
-        run: nmp run build
+        run: npm run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:

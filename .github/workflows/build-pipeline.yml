@@ -3,10 +3,10 @@ name: This is a workflow
 on:
   push:
     branches: 
-      - master
+      - develop
   pull_request:
     branches:
-      - master
+      - develop
 
 jobs:
 

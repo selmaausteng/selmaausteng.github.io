@@ -24,8 +24,10 @@ jobs:
     
       - name: test
         run: npm test
+        
       - name: Run typescript lint and format check
         run: npm run lint:ts
+        
       - name: Run styles lint and format check
         run: npm run lint:css
     

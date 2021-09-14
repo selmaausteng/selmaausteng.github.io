@@ -9,11 +9,7 @@ on:
       - master
 
 jobs:
-  print-comment:
-    runs-on: ubuntu-latest
-    steps: 
-      - run: |
-          echo  "This comment"
+
   build:
     runs-on: ubuntu-latest
     steps:
